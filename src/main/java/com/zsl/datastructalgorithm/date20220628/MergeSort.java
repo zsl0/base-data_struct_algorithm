@@ -36,10 +36,10 @@ public class MergeSort {
      * @param end      结束索引
      */
     private static void mergeSort(int[] elements, int start, int end) {
-        if (end - start == 0) return ;
-
         int size = end - start;
-        int half = size / 2;
+        if (size <= 0) return ;
+
+        int half = (start + end) / 2;
 
         // 分治
         mergeSort(elements, start, half);
@@ -52,12 +52,12 @@ public class MergeSort {
         int rightLen = end - half;
         // 比较并插入排序
         for (int i = 0; i < size + 1; i++) {
-            if (1 == leftIndex - half) {
+            if (leftIndex - half == 1) {
                 tmp[i] = elements[rightIndex++];
                 continue;
             }
 
-            if (1 == rightIndex - end) {
+            if (rightIndex - end == 1) {
                 tmp[i] = elements[leftIndex++];
                 continue;
             }
