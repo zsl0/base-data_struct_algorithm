@@ -24,14 +24,18 @@ public class InsertSort {
         }
 
         for (int i = 1; i < elements.length; i++) {
-            for (int j = 0; j < i; j++) {
-                // 找到位置，将index i,作为存储位置，进行移动
+            int tmp = elements[i];
+            int j = 0;
+            for (; j < i; j++) {
+                // 找到位置，将index i,作为存储位置，先向后进行移动，再存储
                 if (elements[i] < elements[j]) {
-                    int tmp = elements[i];
-                    elements[i] = elements[j];
-                    elements[j] = tmp;
+                    for (int k = i; k > j; --k) {
+                        elements[k] = elements[k - 1];
+                    }
+                    break;
                 }
             }
+            elements[j] = tmp;
         }
     }
 }

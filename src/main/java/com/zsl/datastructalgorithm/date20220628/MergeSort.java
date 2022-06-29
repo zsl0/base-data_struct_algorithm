@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * 归并排序
- * 采用分治思想，逐渐有序
+ *      采用分治思想，逐渐有序
  *
  * @author zsl
  * @date 2022/6/28 21:43
