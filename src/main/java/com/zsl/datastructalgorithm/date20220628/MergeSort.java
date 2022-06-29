@@ -19,6 +19,11 @@ public class MergeSort {
         int[] ints1 = {5, 6};
         int[] ints2 = {6, 5};
         sort(elements);
+        sort(ints1);
+        sort(ints2);
+
+        System.out.println(Arrays.toString(ints1));
+        System.out.println(Arrays.toString(ints2));
         System.out.println(Arrays.toString(elements));
     }
 
